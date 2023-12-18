@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Inter&display=swap');
+:root {
+  --navcouleur: #ffffff;
+  --grostext: #fefefe;
+  --p: #fafcff;
+  --truckenblue: #474dff;
+  --bordergreen:1px solid rgba(0, 128, 0, 0);
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(255, 0, 0, 0);
+  font-family:"Inter";
+  box-sizing: border-box;
+}
+body {
+  background: #1d1d1d;
+}
+/* section navbar */
+
+#barredenavigation {
+  border: 1px solid rgba(0, 0, 0, 0.033);
+  border-radius: 20px;
+  color: var(--navcouleur);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width:99%;
+  margin-left: 50%;
+  margin-top: 10px;
+  transform: translateX(-50%);
+}
+#barredenavigation h3 {
+  font-size: 1.3rem;
+  font-family:"Inter" ;
+}
+#barredenavigation ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  
+  
+  
+}
+#barredenavigation a {
+  color: var(--navcouleur);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+/* section lecords */
+.lecords {
+  margin-top:40px;
+  width: 100%;
+}
+.gridenfant {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+/* ! enfant1 */
+#enfant11{
+  display: grid;
+  align-items: center
+}
+#enfant1 {
+  display: grid;
+  grid-template-rows:60% 20% 20%;
+  padding: 10px;
+  
+}
+#enfant1 h1 {
+  color: var(--grostext);
+  font-size: 5rem;
+}
+#enfant1 h2 {
+  color: var(--truckenblue);
+  font-size: 2.3rem;
+}
+#enfant1 p {
+  color: var(--p);
+}
+
+ /* ! enfant2 */
+#image img{
+  width:95%;
+  margin-left: 30px;
+}
+
+/* section lebasducor */
+.lebasducor{
+  margin-top: 20px;
+  margin: 5px;
+  width:(100% - 10px);
+  border-radius:20px ;
+  height: 175px;
+  background: rgba(0, 0, 0, 0.591);
+  /* border: 1px solid blue; */
+}
+.contenaire-gide{
+  margin-top: 10px;
+  border:var(--bordergreen)
+  padding: 4px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+.liste{
+  
+}
+.liste h3{
+  color: white;   
+  font-size: 1.3rem;
+  margin-left: 27px;
+}
+.liste ul{
+  width:50%;
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  
+}
+.liste li{
+  list-style: none;
+  background: var(--truckenblue);
+  /* a revoir absoluman */
+  margin:5px; /* Ajustez la marge selon vos besoins */
+  height: 30px;
+  border-radius: 10px;
+  text-align: center;
+  
+}
+.liste a{
+  border:var(--bordergreen);
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+/* liste2 */
+.liste2{
+  display: grid;
+  align-items: start;
+}
+.liste2 h3{
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 15%;
+}
+.liste2 ul{
+  list-style: none;
+  border:var(--bordergreen);
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  /* border: 1px solid white; */
+  align-items: center;
+  margin-left: 190px;
+
+}
+.liste2 li{
+display: grid;
+justify-items: center;
+}
+.liste2 li img {
+  width: 100px;
+}
+/* responsive desgne */ 
+@media screen and (max-width:1289px){
+.liste ul{
+width:100%;
+}
+
+  .liste li a{
+  font-size: 0.6rem;
+  text-align: center;
+}
+}
+@media screen and (max-width:1225px) {
+  #enfant1 h1{
+    font-size: 4rem;
+  }
+#enfant1 h2{
+  font-size: 2rem;
+} 
+}
+@media screen and (max-width:1222px) {
+  #enfant1 h1{
+    font-size: 4remrem;
+  }
+#enfant1 h2{
+  font-size: 2rem;
+} 
+}
+
+@media screen and (max-width:1183px){
+  .lebasducor{
+    margin: 0;
+  }
+  @media screen and (max-width:1087px){
+    .contenaire-gide h3{
+      font-size: 1rem;
+    }
+    .liste{
+      width: 100%;
+    }
+    .liste ul{
+      width: 75%;
+      display: block;
+      margin: 0 auto;
+    }
+}
+@media screen and (max-width:1024px){
+  #barredenavigation{
+    grid-template-columns: 30% 70%;
+  }
+  #barredenavigation a{
+    font-size: 0.8rem;
+  }
+  #barredenavigation ul{
+  gap: 20%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 808px){
+
+  #barredenavigation a{
+    font-size: 0.8rem;
+  }
+  #barredenavigation ul{
+  gap: 20%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .gridenfant{
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  #barredenavigation a{
+    font-size: 0.8rem;
+  }
+  #barredenavigation ul{
+  gap: 20%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  #image img{
+    margin-left: 10px;
+  }
+  .lecords{
+    margin-top:70px;
+  }
+  #enfant1 h1{
+  font-size: 3rem;
+  }
+  .liste h3{
+    olor: white;
+    font-size: 0.9rem;
+    margin-left: 27px;
+    width: 100%;
+  }
+  .liste ul{
+    width: 90%;
+    margin-left: 15px;
+    font-size: 0.8rem;
+  }
+  .liste ul a{
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width:770px){
+  #barredenavigation a{
+    font-size: 0.8rem;
+  }
+  #barredenavigation ul{
+  gap: 20%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  #enfant1 h1{
+  font-size: 3rem;
+}
+#enfant1 h2{
+  font-size: 1.5rem
+}
+.liste2 ul{
+  margin-left: 20%;
+}
+#image img{
+  width: 80%;
+  margin-top: 60px;
+}
+}
+@media screen and (max-width:425px) {
+  #barredenavigation a{
+    font-size: 0.3rem;
+  }
+  #barredenavigation ul{
+  gap: 20%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  #barredenavigation{
+    width: 100%;
+    grid-template-columns: 10% 90%;
+  }
+  #barredenavigation ul{
+    margin-left: 20%;
+  }
+  #barredenavigation a{
+    font-size: 1rem;
+  }
+  .gridenfant{
+    grid-template-columns: 1fr;
+  }
+  .lebasducor{
+    height: 300px;
+    background-color: #000000;
+  }
+  .liste li{
+border-radius: 10px;
+  }
+  .liste h3{
+    font-size: 1rem;
+    display: block;
+    margin-left: 130px;
+  }
+  .liste2 h3{
+    font-size:1rem ;
+    display: block;
+    margin: 0px auto;
+  }
+  .contenaire-gide{
+    grid-template-columns:1fr;
+  }
+.liste2{
+  margin-top: 10px;
+}
+  .liste2 ul{  
+margin-left: 0;
+  } 
+  .liste2 ul li img{
+    width: 69px;
+    margin: 5px;
+  }
+}
+@media screen and (max-width:375px) {
+  #barredenavigation a{
+    font-size: 0.8rem;
+  }
+  #barredenavigation ul{
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .contenaire-gide{
+    text-align: center;
+  }
+  
+}
+@media screen and (max-width:320px){
+  
+  #barredenavigation ul{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+  }
+  #barredenavigation a{
+    font-size: 0.7rem;
+    
+  }
+  .contenaire-gide{
+    text-align: center;
+  }
+}  
+
+
+
